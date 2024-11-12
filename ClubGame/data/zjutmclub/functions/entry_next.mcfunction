@@ -1,0 +1,2 @@
+title @p title [{"text":"确认签好名就可以开始喽","color":"green","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}]
+tellraw @p [{"text":"准备好开始新的游戏了吗?: ","color":"gold"},{"text":"[点这里开始]","color":"aqua","clickEvent":{"action":"run_command","value":"/function zjutmclub:start"}}]
