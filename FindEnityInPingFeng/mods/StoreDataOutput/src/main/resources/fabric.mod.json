@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "storedataoutput",
+  "version": "${version}",
+  "name": "StoreDataOutput",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/storedataoutput/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "org.wiselot.storedataoutput.client.StoredataoutputClient"
+    ],
+    "main": [
+      "org.wiselot.storedataoutput.Storedataoutput"
+    ]
+  },
+  "mixins": [
+    "storedataoutput.mixins.json",
+    {
+      "config": "storedataoutput.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
