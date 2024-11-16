@@ -1,6 +1,10 @@
 ## 开始新的游戏 !
+
+# 清除物品前记录一下名字哈
+execute as @p run getData
+
 clear @p
-gamemode adventure @p
+effect give @p minecraft:speed 500 10
 scoreboard players set @p flagClock 1
 
 scoreboard objectives add zjutmclub.scorediamod dummy
@@ -10,17 +14,37 @@ scoreboard objectives add flagScoreWait dummy
 scoreboard players set @p flagScoreWait 1
 
 ## 放箱子
-# test
-setblock -254 1 -129 chest[facing=east]
-setblock -251 1 -131 chest[facing=south]
-setblock -251 1 -123 chest[facing=west]
-setblock -257 1 -124 chest[facing=north]
-data merge block -251 1 -131 {Items:[{id:"minecraft:diamond",Count:1b,tag:{display:{Name:"[{\"text\":\"金色传说!\",\"color\":\"gold\"}]"},Tags:["treasure_0"]}}]}
+# ns
+setblock -149 10 -217 chest[facing=south]
+data merge block -149 10 -217 {Items:[{Count:1b,Slot:0b,id:"minecraft:poppy",tag:{RepairCost:0,display:{Name:'{"text":"给非星际玩家的奖励"}'}}}],id:"minecraft:chest",x:-163,y:10,z:-108}
+
+# 窗台望远镜
+setblock -163 10 -108 chest[facing=north]
+data merge block -163 10 -108 {Items:[{Count:1b,Slot:0b,id:"minecraft:spyglass",tag:{RepairCost:0,display:{Name:'{"text":"看萌萌可爱ns的望远镜"}'}}}],id:"minecraft:chest",x:-163,y:10,z:-108}
+
+# 大厅演讲稿
+setblock -195 1 -164 chest[facing=south]
+data merge block -195 1 -164 {Items:[{Count:1b,Slot:0b,id:"minecraft:paper",tag:{RepairCost:0,display:{Name:'{"text":"演讲稿"}'}}}],id:"minecraft:chest",x:-195,y:1,z:-164}
 
 ## 放展示框
-# test
-# 藏箱子底下统计的时候要把展示框清除哦
-summon item_frame -254 0 -129 {Items:[{id:"minecraft:diamond",Count:1b,tag:{display:{Name:"[{\"text\":\"金色传说!\",\"color\":\"gold\",}]"},Tags:["treasure_1"]}}],Rotation:0}
+
+# 展示框清除
+kill @e[type=minecraft:glow_item_frame]
+
+# 底气
+summon minecraft:glow_item_frame -319 2 -86 {Facing:5,Item:{id:"minecraft:snowball",tag:{RepairCost:0,display:{Name:'{"text":"底气!"}'}},Count:1b}}
+# 我爱工大
+summon minecraft:glow_item_frame -142 0 -114 {Facing:1,Item:{id:"minecraft:red_dye",tag:{RepairCost:0,display:{Name:'{"text":"我爱浙江工业大学"}'}},Count:1b}}
+# 大厅校园卡
+summon minecraft:glow_item_frame -180 3 -188 {Facing:1,Item:{id:"minecraft:warped_trapdoor",tag:{RepairCost:0,display:{Name:'{"text":"不知是谁遗失的校园卡"}'}},Count:1b}}
+# 球场的球
+summon minecraft:glow_item_frame -86 0 -185 {Facing:1,Item:{id:"minecraft:magma_cream",tag:{RepairCost:0,display:{Name:'{"text":"球"}'}},Count:1b}}
+# 拉拉棒
+summon minecraft:glow_item_frame -217 4 -137 {Facing:5,Item:{id:"minecraft:soul_torch",tag:{RepairCost:0,display:{Name:'{"text":"观看板球赛的啦啦棒"}'}},Count:1b}}
+#腮红
+summon minecraft:glow_item_frame -200 11 -155 {Facing:4,Item:{id:"minecraft:pink_dye",tag:{RepairCost:0,display:{Name:'{"text":"腮红"}'}},Count:1b}}
+# 镜子
+summon minecraft:glow_item_frame -200 11 -155 {Facing:8,Item:{id:"minecraft:white_stained_glass_pane",tag:{RepairCost:0,display:{Name:'{"text":"镜子（我不是任务道具"}'}},Count:1b}}
 
 ## 其他的再说吧
 
