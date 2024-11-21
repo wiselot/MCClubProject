@@ -7,8 +7,8 @@ execute if score @p flagScoreWait matches 1 if score @p zjutmclub.scorediamod ma
 
 ## 找ns
 execute if score @p ifns matches 1 run scoreboard players add @p netherstar 1
-execute at @p if score @p netherstar matches 40 if entity @e[type=minecraft:armor_stand,distance=..5] run function zjutmclub:nssay
-execute if score @p netherstar matches 40 run scoreboard players set @p netherstar 0
+execute if score @p ifns matches 1 at @p if score @p netherstar matches 100 if entity @e[type=minecraft:armor_stand,distance=..5] run function zjutmclub:nssay
+execute if score @p ifns matches 1 if score @p netherstar matches 100 run scoreboard players set @p netherstar 0
 
 ## 找电梯维修手册捏
 execute if score @p iflift matches 1 if entity @a[nbt={Inventory:[{id:"minecraft:book",tag:{display:{Name:'[{"text":"电梯维修手册","color":"dark_blue"}]'}}}]}] run function zjutmclub:liftsay
@@ -21,5 +21,5 @@ execute if score @p ifCert matches 1 if entity @a[nbt={Inventory:[{id:"minecraft
 
 ## 回去找NS哈
 execute if score @p ifnsnext matches 1 run scoreboard players add @p netherstar 1
-execute at @p if score @p netherstar matches 40 if entity @e[type=minecraft:armor_stand,distance=..5] run function zjutmclub:nssaynext
-execute if score @p netherstar matches 40 run scoreboard players set @p netherstar 0
+execute if score @p ifnsnext matches 1 at @p if score @p netherstar matches 100 if entity @e[type=minecraft:armor_stand,distance=..5] run function zjutmclub:nssaynext
+execute if score @p ifnsnext matches 1 if score @p netherstar matches 100 run scoreboard players set @p netherstar 0

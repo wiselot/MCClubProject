@@ -5,9 +5,10 @@ clear @p
 effect give @p minecraft:speed 500 10
 effect give @p minecraft:resistance 300 5
 
-scoreboard players set @p zjutmclub.second 0
-scoreboard players set @p zjutmclub.minute 3
-scoreboard objectives add zjutmclub.tick dummy
+# 
+#scoreboard players set @p zjutmclub.second 0
+#scoreboard players set @p zjutmclub.minute 3
+#scoreboard objectives add zjutmclub.tick dummy
 
 # 新游戏
 title @p title [{"text":"你似乎听到报告厅二楼传来什么声音","color":"gold"}]
@@ -19,7 +20,7 @@ summon minecraft:glow_item_frame -144 2 -177 {Facing:1,Item:{id:"minecraft:book"
 scoreboard players set @p ifns 1
 
 scoreboard objectives add netherstar dummy
-scoreboard players set @p netherstar 10
+scoreboard players set @p netherstar 90
 
 scoreboard players set @p iflift 1
 scoreboard players set @p ifkey 1
